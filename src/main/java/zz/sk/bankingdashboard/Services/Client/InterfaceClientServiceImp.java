@@ -9,6 +9,9 @@ import zz.sk.bankingdashboard.Entities.DeuxiemeVisite;
 import zz.sk.bankingdashboard.Entities.PremiereVisite;
 import zz.sk.bankingdashboard.Entities.PromesseClient;
 import zz.sk.bankingdashboard.Repositories.ClientRepository;
+import zz.sk.bankingdashboard.Repositories.DeuxiemeVisiteRepository;
+import zz.sk.bankingdashboard.Repositories.PremiereVisiteRepository;
+import zz.sk.bankingdashboard.Repositories.PromesseRepository;
 
 
 @Slf4j
@@ -17,6 +20,12 @@ public class InterfaceClientServiceImp implements InterfaceClientService{
 
     @Autowired
     ClientRepository clientRepository;
+    @Autowired
+    DeuxiemeVisiteRepository deuxiemeVisiteRepository;
+    @Autowired
+    PremiereVisiteRepository premiereVisiteRepository;
+    @Autowired
+    PromesseRepository promesseRepository;
     @Override
     public Client addClient(Client client) {
         return clientRepository.save(client);
@@ -25,24 +34,35 @@ public class InterfaceClientServiceImp implements InterfaceClientService{
     public Client findclientbyid(String id){
         return clientRepository.findClientByIdClient(id);
     }
+
+    public Client updateclient(String id){
+        Client client = clientRepository.findClientByIdClient(id);
+        if (client !=null) {
+            return clientRepository.save(client);
+        }
+        else return null;
+    }
+
+    public Client setpremierevisite(String id , PremiereVisite premierevisite ){
+        Client client = clientRepository.findClientByIdClient(id);
+        if (client !=null){
+            client.setPremiereVisite(premierevisite);
+            return clientRepository.save(client);}
+        else
+            return null ;
+        }
+
     @Override
-    public Client AffecterPromesseClient(PromesseClient promesseClient, String idClient) {
-        Client client = clientRepository.findClientByIdClient(idClient);
-        client.setPromesseClient(promesseClient);
-        return clientRepository.save(client);
+    public Client setdeuxiemevisite(String id, DeuxiemeVisite deuxiemeVisite) {
+        return null;
     }
 
     @Override
-    public Client AffecterDeuxiemeVisite(DeuxiemeVisite deuxiemeVisite, String idClient) {
-        Client client = clientRepository.findClientByIdClient(idClient);
-        client.setDeuxiemeVisite(deuxiemeVisite);
-        return clientRepository.save(client);
-    }
-
-    @Override
-    public Client AffecterPremiereVisite(PremiereVisite premiereVisite, String idClient) {
-        Client client = clientRepository.findClientByIdClient(idClient);
-        client.setPremiereVisite(premiereVisite);
-        return clientRepository.save(client);
+    public Client setpromesseclient(String id, PromesseClient promesseClient) {
+        return null;
     }
 }
+
+
+
+

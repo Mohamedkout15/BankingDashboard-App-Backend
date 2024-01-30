@@ -20,11 +20,13 @@ public interface InterfaceClientService {
 
     public Client findclientbyid(String id);
 
-    public Client AffecterDeuxiemeVisite(DeuxiemeVisite deuxiemeVisite,String idClient);
+    public Client updateclient(String id);
 
-    public Client AffecterPremiereVisite(PremiereVisite premiereVisite, String idClient);
+    public Client setpremierevisite(String id,PremiereVisite premierevisite);
 
-    public Client AffecterPromesseClient(PromesseClient promesseClient, String idClient);
+    public Client setdeuxiemevisite(String id,DeuxiemeVisite deuxiemeVisite);
+
+    public Client setpromesseclient(String id , PromesseClient promesseClient);
 
 
 }

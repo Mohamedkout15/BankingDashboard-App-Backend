@@ -1,6 +1,6 @@
 package zz.sk.bankingdashboard.Entities;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -18,10 +18,10 @@ public class DeuxiemeVisite implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-
-
-
+    @Temporal(TemporalType.DATE)
+    @JsonFormat(pattern = "yyyy-MM-dd", shape = JsonFormat.Shape.STRING)
     private Date dateDxVisite;
+
     private Number chiffreAffaire;
     private Number placements;
     private Number engagements;

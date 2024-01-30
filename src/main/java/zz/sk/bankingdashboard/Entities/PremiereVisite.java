@@ -1,5 +1,6 @@
 package zz.sk.bankingdashboard.Entities;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
@@ -19,7 +20,8 @@ public class PremiereVisite implements Serializable {
     private Long id;
 
 
-
+    @Temporal(TemporalType.DATE)
+    @JsonFormat(pattern = "yyyy-MM-dd", shape = JsonFormat.Shape.STRING)
     private Date datePrVisite;
     private Number chiffreAffaire;
     private Number placements;
