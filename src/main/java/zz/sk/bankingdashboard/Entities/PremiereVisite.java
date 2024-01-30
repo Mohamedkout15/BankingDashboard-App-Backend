@@ -29,4 +29,8 @@ public class PremiereVisite implements Serializable {
     private Number impayes;
     private Number debit;
     private Number depot;
+
+    public Date setDatePrvisite(Date date) {
+        return this.datePrVisite = date ;
+    }
 }
