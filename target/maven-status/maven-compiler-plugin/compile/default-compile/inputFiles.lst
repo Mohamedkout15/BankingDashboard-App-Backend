@@ -1,0 +1,8 @@
+/home/hammadi/Desktop/ExplfoyerSpring/BankingDashboard/src/main/java/zz/sk/bankingdashboard/Configuration/SwaggerConfig.java
+/home/hammadi/Desktop/ExplfoyerSpring/BankingDashboard/src/main/java/zz/sk/bankingdashboard/Configuration/WebSecurityConfig.java
+/home/hammadi/Desktop/ExplfoyerSpring/BankingDashboard/src/main/java/zz/sk/bankingdashboard/Configuration/AppConfig.java
+/home/hammadi/Desktop/ExplfoyerSpring/BankingDashboard/src/main/java/zz/sk/bankingdashboard/Entities/User.java
+/home/hammadi/Desktop/ExplfoyerSpring/BankingDashboard/src/main/java/zz/sk/bankingdashboard/BankingDashboardApplication.java
+/home/hammadi/Desktop/ExplfoyerSpring/BankingDashboard/src/main/java/zz/sk/bankingdashboard/Repositories/UserPrincipal.java
+/home/hammadi/Desktop/ExplfoyerSpring/BankingDashboard/src/main/java/zz/sk/bankingdashboard/Controllers/UserRegistrationController.java
+/home/hammadi/Desktop/ExplfoyerSpring/BankingDashboard/src/main/java/zz/sk/bankingdashboard/Repositories/UserRepository.java
