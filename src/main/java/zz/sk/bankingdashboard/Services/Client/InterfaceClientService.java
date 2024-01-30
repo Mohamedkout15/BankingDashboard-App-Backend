@@ -8,6 +8,7 @@ import zz.sk.bankingdashboard.Entities.DeuxiemeVisite;
 import zz.sk.bankingdashboard.Entities.PremiereVisite;
 import zz.sk.bankingdashboard.Entities.PromesseClient;
 
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
@@ -27,6 +28,9 @@ public interface InterfaceClientService {
     public Client setdeuxiemevisite(String id,DeuxiemeVisite deuxiemeVisite);
 
     public Client setpromesseclient(String id , PromesseClient promesseClient);
+
+
+    public Client setdatedxvisite(String id , Date date);
 
 
 }

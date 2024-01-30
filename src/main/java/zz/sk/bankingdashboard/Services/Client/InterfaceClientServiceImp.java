@@ -2,7 +2,6 @@ package zz.sk.bankingdashboard.Services.Client;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 import zz.sk.bankingdashboard.Entities.Client;
 import zz.sk.bankingdashboard.Entities.DeuxiemeVisite;
@@ -12,6 +11,8 @@ import zz.sk.bankingdashboard.Repositories.ClientRepository;
 import zz.sk.bankingdashboard.Repositories.DeuxiemeVisiteRepository;
 import zz.sk.bankingdashboard.Repositories.PremiereVisiteRepository;
 import zz.sk.bankingdashboard.Repositories.PromesseRepository;
+
+import java.util.Date;
 
 
 @Slf4j
@@ -52,14 +53,37 @@ public class InterfaceClientServiceImp implements InterfaceClientService{
             return null ;
         }
 
+
     @Override
     public Client setdeuxiemevisite(String id, DeuxiemeVisite deuxiemeVisite) {
-        return null;
-    }
+        Client client = clientRepository.findClientByIdClient(id);
+        if (client !=null){
+            client.setDeuxiemeVisite(deuxiemeVisite);
+            return clientRepository.save(client);}
+        else
+            return null ;
+        }
+
 
     @Override
     public Client setpromesseclient(String id, PromesseClient promesseClient) {
         return null;
+    }
+
+    @Override
+    public Client setdatedxvisite(String id, Date date) {
+        Client client = clientRepository.findClientByIdClient(id);
+
+        if (client != null) {
+            if (client.getDeuxiemeVisite() != null) {
+                client.getDeuxiemeVisite().setDatedxvisite(date);
+                return clientRepository.save(client);
+            } else {
+                return null;
+            }
+        } else {
+            return null;
+        }
     }
 }
 

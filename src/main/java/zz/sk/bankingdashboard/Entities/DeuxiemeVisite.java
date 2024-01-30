@@ -28,4 +28,8 @@ public class DeuxiemeVisite implements Serializable {
     private Number impayes;
     private Number debit;
     private Number depot;
+
+    public Date setDatedxvisite(Date date) {
+        return this.dateDxVisite = date ;
+    }
 }
