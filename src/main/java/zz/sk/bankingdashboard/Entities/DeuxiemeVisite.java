@@ -32,4 +32,13 @@ public class DeuxiemeVisite implements Serializable {
     public Date setDatedxvisite(Date date) {
         return this.dateDxVisite = date ;
     }
+    public Void attvaldxv(Number n1,Number n2,Number n3,Number n4,Number n5,Number n6){
+            this.chiffreAffaire=n2;
+            this.placements=n1;
+            this.engagements=n4;
+            this.impayes=n3;
+            this.debit=n5;
+            this.depot=n6;
+        return null;
+    }
 }

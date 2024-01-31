@@ -2,7 +2,6 @@ package zz.sk.bankingdashboard.Controllers.Client;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.*;
@@ -11,8 +10,6 @@ import zz.sk.bankingdashboard.Entities.DeuxiemeVisite;
 import zz.sk.bankingdashboard.Entities.PremiereVisite;
 import zz.sk.bankingdashboard.Entities.PromesseClient;
 import zz.sk.bankingdashboard.Services.Client.InterfaceClientService;
-
-import javax.ws.rs.QueryParam;
 import java.util.Date;
 
 
