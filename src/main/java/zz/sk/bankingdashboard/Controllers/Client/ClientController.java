@@ -50,8 +50,8 @@ public class ClientController {
     }
     @PostMapping("/setpremierevisite/{id}")
     public Client setpremierevisite(@PathVariable String id ,
-                                    @RequestParam("premierevisite") PremiereVisite premiereVisite){
-        return demoservice.setdeuxiemevisite(id, premiereVisite);
+                                    @RequestParam("premierevisite") PremiereVisite premierevisite){
+        return demoservice.setpremierevisite(id, premierevisite);
     }
     @PostMapping("/setpromesseclient/{id}")
     public Client setpromesseclient(@PathVariable String id ,
