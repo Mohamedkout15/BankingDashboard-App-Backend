@@ -31,6 +31,9 @@ public class InterfaceClientServiceImp implements InterfaceClientService{
     public Client addClient(Client client) {
         client.getDeuxiemeVisite().setDatedxvisite(null);
         client.getPremiereVisite().setDatePrvisite(null);
+        client.getDeuxiemeVisite().attvaldxv(null,null,null,null,null,null);
+        client.getPremiereVisite().attvalprv(null,null,null,null,null,null);
+        client.getPromesseClient().attprc(null,null,null,null,null,null);
         return clientRepository.save(client);
     }
 

@@ -9,6 +9,7 @@ import zz.sk.bankingdashboard.Entities.Client;
 import zz.sk.bankingdashboard.Entities.DeuxiemeVisite;
 import zz.sk.bankingdashboard.Entities.PremiereVisite;
 import zz.sk.bankingdashboard.Entities.PromesseClient;
+import zz.sk.bankingdashboard.Repositories.ClientRepository;
 import zz.sk.bankingdashboard.Services.Client.InterfaceClientService;
 import java.util.Date;
 
@@ -22,6 +23,8 @@ public class ClientController {
 
     @Autowired
     InterfaceClientService demoservice ;
+    @Autowired
+    private ClientRepository clientRepository;
 
     @PostMapping("/addclient")
     public Client addclient(@RequestBody Client client) {
@@ -46,8 +49,30 @@ public class ClientController {
         return demoservice.setdateprvisite(id, date);
     }
 
-
-
+    @PostMapping("/setvalprv/{id}")
+    @CrossOrigin(origins = "http://localhost:4200")
+    public Client setvalprv(@PathVariable String id,
+                            @RequestParam("n1")Number n1,Number n2,Number n3,Number n4,Number n5,Number n6){
+        Client client = clientRepository.findClientByIdClient(id);
+        client.getPremiereVisite().attvalprv(n1,n2,n3,n4,n5,n6);
+        return clientRepository.save(client);
+    }
+    @PostMapping("/setvaldxv/{id}")
+    @CrossOrigin(origins = "http://localhost:4200")
+    public Client setvaldxv(@PathVariable String id,
+                            @RequestParam("n1")Number n1,Number n2,Number n3,Number n4,Number n5,Number n6){
+        Client client = clientRepository.findClientByIdClient(id);
+        client.getDeuxiemeVisite().attvaldxv(n1,n2,n3,n4,n5,n6);
+        return clientRepository.save(client);
+    }
+    @PostMapping("/setvalprc/{id}")
+    @CrossOrigin(origins = "http://localhost:4200")
+    public Client setprc(@PathVariable String id,
+                            @RequestParam("n1")Number n1,Number n2,Number n3,Number n4,Number n5,Number n6){
+        Client client = clientRepository.findClientByIdClient(id);
+        client.getPromesseClient().attprc(n1,n2,n3,n4,n5,n6);
+        return clientRepository.save(client);
+    }
 
     @PostMapping("/setdeuxiemevisite/{id}")
     public Client setdeuxiemevisite(@PathVariable String id ,
