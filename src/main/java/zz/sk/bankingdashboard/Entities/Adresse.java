@@ -11,7 +11,7 @@ import java.io.Serializable;
 @NoArgsConstructor
 @ToString
 @Entity
-public class Adresse {
+public class Adresse implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
