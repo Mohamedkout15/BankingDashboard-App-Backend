@@ -37,10 +37,19 @@ public class ClientController {
     }
 
     @PostMapping("/setdatedxvisite/{id}")
+    @CrossOrigin(origins = "http://localhost:4200")
     public Client setdatedxvisite(@PathVariable String id,
                                   @RequestParam("date") @DateTimeFormat(pattern = "yyyy-MM-dd") Date date) {
         return demoservice.setdatedxvisite(id, date);
     }
+    @PostMapping("/setdateprvisite/{id}")
+    @CrossOrigin(origins = "http://localhost:4200")
+    public Client setdateprvisite(@PathVariable String id,
+                                  @RequestParam("date") @DateTimeFormat(pattern = "yyyy-MM-dd") Date date) {
+        return demoservice.setdateprvisite(id, date);
+    }
+
+
 
 
     @PostMapping("/setdeuxiemevisite/{id}")

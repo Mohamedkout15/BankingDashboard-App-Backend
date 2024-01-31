@@ -31,6 +31,7 @@ public interface InterfaceClientService {
 
 
     public Client setdatedxvisite(String id , Date date);
+    public Client setdateprvisite(String id , Date date);
 
 
 }

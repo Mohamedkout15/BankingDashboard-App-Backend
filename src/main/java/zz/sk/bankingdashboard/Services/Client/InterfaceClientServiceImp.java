@@ -87,6 +87,21 @@ public class InterfaceClientServiceImp implements InterfaceClientService{
             return null;
         }
     }
+
+    public Client setdateprvisite(String id, Date date) {
+        Client client = clientRepository.findClientByIdClient(id);
+
+        if (client != null) {
+            if (client.getPremiereVisite() != null) {
+                client.getPremiereVisite().setDatePrvisite(date);
+                return clientRepository.save(client);
+            } else {
+                return null;
+            }
+        } else {
+            return null;
+        }
+    }
 }
 
 
