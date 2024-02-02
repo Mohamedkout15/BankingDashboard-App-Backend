@@ -33,13 +33,12 @@ public class PremiereVisite implements Serializable {
     public Date setDatePrvisite(Date date) {
         return this.datePrVisite = date ;
     }
-    public Void attvalprv(Number n1,Number n2,Number n3,Number n4,Number n5,Number n6){
+    public void attvalprv(Number n1,Number n2,Number n3,Number n4,Number n5,Number n6){
         this.chiffreAffaire=n2;
         this.placements=n1;
         this.engagements=n4;
         this.impayes=n3;
         this.debit=n5;
         this.depot=n6;
-        return null;
     }
 }

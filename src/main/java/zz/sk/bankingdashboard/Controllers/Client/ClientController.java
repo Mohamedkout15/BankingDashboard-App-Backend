@@ -10,8 +10,13 @@ import zz.sk.bankingdashboard.Entities.DeuxiemeVisite;
 import zz.sk.bankingdashboard.Entities.PremiereVisite;
 import zz.sk.bankingdashboard.Entities.PromesseClient;
 import zz.sk.bankingdashboard.Repositories.ClientRepository;
+import zz.sk.bankingdashboard.Repositories.DeuxiemeVisiteRepository;
+import zz.sk.bankingdashboard.Repositories.PremiereVisiteRepository;
+import zz.sk.bankingdashboard.Repositories.PromesseRepository;
 import zz.sk.bankingdashboard.Services.Client.InterfaceClientService;
 import java.util.Date;
+import java.util.List;
+import java.util.Map;
 
 
 @RestController
@@ -25,6 +30,12 @@ public class ClientController {
     InterfaceClientService demoservice ;
     @Autowired
     private ClientRepository clientRepository;
+    @Autowired
+    private PremiereVisiteRepository premiereVisiteRepository;
+    @Autowired
+    private DeuxiemeVisiteRepository deuxiemeVisiteRepository;
+    @Autowired
+    private PromesseRepository promesseRepository;
 
     @PostMapping("/addclient")
     public Client addclient(@RequestBody Client client) {
@@ -51,26 +62,61 @@ public class ClientController {
 
     @PostMapping("/setvalprv/{id}")
     @CrossOrigin(origins = "http://localhost:4200")
-    public Client setvalprv(@PathVariable String id,
-                            @RequestParam("n1")Number n1,Number n2,Number n3,Number n4,Number n5,Number n6){
+    public Client setvalprv(@PathVariable String id, @RequestBody List<Number> numbers) {
         Client client = clientRepository.findClientByIdClient(id);
-        client.getPremiereVisite().attvalprv(n1,n2,n3,n4,n5,n6);
+        PremiereVisite premiereVisite = client.getPremiereVisite();
+        if (numbers.size() == 6) {
+            premiereVisite.attvalprv(
+                    numbers.get(0),
+                    numbers.get(1),
+                    numbers.get(2),
+                    numbers.get(3),
+                    numbers.get(4),
+                    numbers.get(5)
+            );
+        }
+        premiereVisiteRepository.save(premiereVisite);
         return clientRepository.save(client);
     }
+
+
     @PostMapping("/setvaldxv/{id}")
     @CrossOrigin(origins = "http://localhost:4200")
-    public Client setvaldxv(@PathVariable String id,
-                            @RequestParam("n1")Number n1,Number n2,Number n3,Number n4,Number n5,Number n6){
+    public Client setvaldxv(@PathVariable String id
+                            , @RequestBody List<Number> numbers){
         Client client = clientRepository.findClientByIdClient(id);
-        client.getDeuxiemeVisite().attvaldxv(n1,n2,n3,n4,n5,n6);
+        DeuxiemeVisite deuxiemeVisite = client.getDeuxiemeVisite();
+        if (numbers.size() == 6) {
+            deuxiemeVisite.attvaldxv(
+                    numbers.get(0),
+                    numbers.get(1),
+                    numbers.get(2),
+                    numbers.get(3),
+                    numbers.get(4),
+                    numbers.get(5)
+            );
+        }
+        deuxiemeVisiteRepository.save(deuxiemeVisite);
         return clientRepository.save(client);
     }
     @PostMapping("/setvalprc/{id}")
     @CrossOrigin(origins = "http://localhost:4200")
-    public Client setprc(@PathVariable String id,
-                            @RequestParam("n1")Number n1,Number n2,Number n3,Number n4,Number n5,Number n6){
+    public Client setprc(@PathVariable String id
+                        ,@RequestBody List<Number> numbers)
+    {
         Client client = clientRepository.findClientByIdClient(id);
-        client.getPromesseClient().attprc(n1,n2,n3,n4,n5,n6);
+        PromesseClient promesseClient = client.getPromesseClient();
+        if (numbers.size() == 6) {
+            promesseClient.attprc(
+                    numbers.get(0),
+                    numbers.get(1),
+                    numbers.get(2),
+                    numbers.get(3),
+                    numbers.get(4),
+                    numbers.get(5)
+            );
+        }
+        promesseRepository.save(promesseClient);
         return clientRepository.save(client);
     }
 
