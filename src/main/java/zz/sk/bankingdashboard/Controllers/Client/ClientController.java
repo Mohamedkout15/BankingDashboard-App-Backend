@@ -16,7 +16,6 @@ import zz.sk.bankingdashboard.Repositories.PromesseRepository;
 import zz.sk.bankingdashboard.Services.Client.InterfaceClientService;
 import java.util.Date;
 import java.util.List;
-import java.util.Map;
 
 
 @RestController
@@ -38,12 +37,14 @@ public class ClientController {
     private PromesseRepository promesseRepository;
 
     @PostMapping("/addclient")
-    public Client addclient(@RequestBody Client client) {
+    public Client addclient(@RequestBody Client client)
+    {
         return demoservice.addClient(client);
     }
 
     @GetMapping("/findclient/{id}")
-    public Client findclientbyid(@PathVariable String id){
+    public Client findclientbyid(@PathVariable String id)
+    {
         return demoservice.findclientbyid(id);
     }
 
