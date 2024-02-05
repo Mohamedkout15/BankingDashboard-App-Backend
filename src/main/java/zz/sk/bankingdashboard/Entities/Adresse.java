@@ -2,7 +2,6 @@ package zz.sk.bankingdashboard.Entities;
 
 import jakarta.persistence.*;
 import lombok.*;
-
 import java.io.Serializable;
 
 @Getter

@@ -136,6 +136,4 @@ public class ClientController {
                                     @RequestParam("promesseclient") PromesseClient promesseClient){
         return demoservice.setpromesseclient(id, promesseClient);
     }
-
-
 }

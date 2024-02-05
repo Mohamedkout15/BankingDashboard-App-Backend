@@ -4,9 +4,7 @@ import jakarta.persistence.*;
 import lombok.*;
 
 import java.io.Serializable;
-import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.List;
+
 
 @Getter
 @Setter
@@ -21,6 +19,4 @@ public class User implements Serializable {
     private String username;
     private String password;
     private Role  role;
-
-    // getters and setters
 }

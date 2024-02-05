@@ -22,19 +22,22 @@ public class Client implements Serializable {
     private String matriculeFiscale;
     private String numtel;
 
-    @OneToOne(cascade = {CascadeType.PERSIST, CascadeType.REMOVE,CascadeType.MERGE}, orphanRemoval = true)
-    @JoinColumn(name = "deuxieme visite")
-    private DeuxiemeVisite deuxiemeVisite;
+    @OneToOne(cascade = { CascadeType.REMOVE,CascadeType.MERGE}, orphanRemoval = true)
+    @JoinColumn(name = "adresse client")
+    private Adresse adresse;
 
     @OneToOne(cascade = {CascadeType.PERSIST, CascadeType.REMOVE,CascadeType.MERGE}, orphanRemoval = true)
     @JoinColumn(name = "premiere visite")
     private PremiereVisite premiereVisite;
 
+    @OneToOne(cascade = {CascadeType.PERSIST, CascadeType.REMOVE,CascadeType.MERGE}, orphanRemoval = true)
+    @JoinColumn(name = "deuxieme visite")
+    private DeuxiemeVisite deuxiemeVisite;
+
+
     @OneToOne(cascade = { CascadeType.REMOVE,CascadeType.MERGE}, orphanRemoval = true)
     @JoinColumn(name = "promesse client")
     private PromesseClient promesseClient;
 
-    @OneToOne(cascade = { CascadeType.REMOVE,CascadeType.MERGE}, orphanRemoval = true)
-    @JoinColumn(name = "adresse client")
-    private Adresse adresse;
+
 }
