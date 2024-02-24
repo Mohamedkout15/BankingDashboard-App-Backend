@@ -80,7 +80,8 @@ Path Variable: id - The unique ID of the client.<br>
 Request Body: List of numbers representing the values of the promise client.<br>
 Response: The updated client object.<br>
 
-
+## Project Structure
+The project structure is organized as follows:
 ```bash
 /BankingDashboard Project/BankingDashboard-App-Backend
 ├── compose.yaml
