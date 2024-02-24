@@ -1,5 +1,6 @@
 package zz.sk.bankingdashboard.Entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -26,9 +27,12 @@ public class Client implements Serializable {
     @JoinColumn(name = "adresse client")
     private Adresse adresse;
 
+
     @OneToOne(cascade = {CascadeType.PERSIST, CascadeType.REMOVE,CascadeType.MERGE}, orphanRemoval = true)
     @JoinColumn(name = "premiere visite")
     private PremiereVisite premiereVisite;
+
+
 
     @OneToOne(cascade = {CascadeType.PERSIST, CascadeType.REMOVE,CascadeType.MERGE}, orphanRemoval = true)
     @JoinColumn(name = "deuxieme visite")
@@ -38,6 +42,7 @@ public class Client implements Serializable {
     @OneToOne(cascade = { CascadeType.REMOVE,CascadeType.MERGE}, orphanRemoval = true)
     @JoinColumn(name = "promesse client")
     private PromesseClient promesseClient;
+
 
 
 }

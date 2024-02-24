@@ -29,11 +29,6 @@ public class InterfaceClientServiceImp implements InterfaceClientService{
     PromesseRepository promesseRepository;
     @Override
     public Client addClient(Client client) {
-        client.getDeuxiemeVisite().setDatedxvisite(null);
-        client.getPremiereVisite().setDatePrvisite(null);
-        client.getDeuxiemeVisite().attvaldxv(null,null,null,null,null,null);
-        client.getPremiereVisite().attvalprv(null,null,null,null,null,null);
-        client.getPromesseClient().attprc(null,null,null,null,null,null);
         return clientRepository.save(client);
     }
 
@@ -73,6 +68,12 @@ public class InterfaceClientServiceImp implements InterfaceClientService{
     @Override
     public Client setpromesseclient(String id, PromesseClient promesseClient) {
         return null;
+    }
+
+    @Override
+    public boolean checkid(String id) {
+        Client client = clientRepository.findClientByIdClient(id);
+        return client != null;
     }
 
     @Override

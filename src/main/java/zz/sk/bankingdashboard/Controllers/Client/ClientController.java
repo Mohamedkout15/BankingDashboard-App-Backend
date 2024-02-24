@@ -136,4 +136,8 @@ public class ClientController {
                                     @RequestParam("promesseclient") PromesseClient promesseClient){
         return demoservice.setpromesseclient(id, promesseClient);
     }
+    @GetMapping("/checkid/{id}")
+    public boolean checkid(@PathVariable String id){
+        return demoservice.checkid(id);
+    }
 }

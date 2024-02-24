@@ -18,7 +18,7 @@ public class Adresse implements Serializable {
     private String adresse ;
     private String ville ;
     private String gouvernerat ;
-    private Number codepostal ;
+    private String codepostal ;
     private String pays ;
 
 }

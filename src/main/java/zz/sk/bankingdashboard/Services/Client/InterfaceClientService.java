@@ -29,7 +29,7 @@ public interface InterfaceClientService {
 
     public Client setpromesseclient(String id , PromesseClient promesseClient);
 
-
+    public boolean checkid(String id);
     public Client setdatedxvisite(String id , Date date);
     public Client setdateprvisite(String id , Date date);
 
