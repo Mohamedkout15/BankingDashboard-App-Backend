@@ -169,7 +169,7 @@ The project structure is organized as follows:
 
 ## Authors
 
-- [@Mohamedkout15](https://www.github.com/Mohamedkout15
+- [@Mohamedkout15](https://www.github.com/Mohamedkout15)
 
 ## License
 This project is licensed under the terms of the MIT license. See the [LICENSE](./LICENSE) file for details.
