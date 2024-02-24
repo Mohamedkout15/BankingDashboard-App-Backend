@@ -23,11 +23,62 @@ Clone the Repository:
    
 ## API Endpoints:
 
-/api/client:
-/api/accounts: Endpoint for managing bank accounts.
-Add more endpoints as needed.
-## Project Structure
-The project structure is organized as follows:
+**Client API Endpoints**<br>
+The ClientController class provides various endpoints for managing client data in the BankingDashboard application.<br>
+
+**Add Client**<br>
+URL: /client/addclient<br>
+Method: POST<br>
+Description: Adds a new client to the system.<br>
+Request Body: Client object representing the new client to be added.<br>
+Response: The newly added client object.<br>
+
+**Find Client by ID**<br>
+URL: /client/findclient/{id}<br>
+Method: GET<br>
+Description: Retrieves a client by their unique ID.<br>
+Path Variable: id - The unique ID of the client.<br>
+Response: The client object with the specified ID.<br>
+
+**Set Date of Second Visit**<br>
+URL: /client/setdatedxvisite/{id}<br>
+Method: POST<br>
+Description: Sets the date of the second visit for a client.<br>
+Path Variable: id - The unique ID of the client.<br>
+Request Parameter: date - The date of the second visit (format: yyyy-MM-dd).<br>
+Response: The updated client object.<br>
+
+**Set Date of First Visit**<br>
+URL: /client/setdateprvisite/{id}<br>
+Method: POST<br>
+Description: Sets the date of the first visit for a client.<br>
+Path Variable: id - The unique ID of the client.<br>
+Request Parameter: date - The date of the first visit (format: yyyy-MM-dd).<br>
+Response: The updated client object.<br>
+
+**Set Values of First Visit**<br>
+URL: /client/setvalprv/{id}<br>
+Method: POST<br>
+Description: Sets the values of the first visit for a client.<br>
+Path Variable: id - The unique ID of the client.<br>
+Request Body: List of numbers representing the values of the first visit.<br>
+Response: The updated client object.<br>
+
+**Set Values of Second Visit**<br>
+URL: /client/setvaldxv/{id}<br>
+Method: POST<br>
+Description: Sets the values of the second visit for a client.<br>
+Path Variable: id - The unique ID of the client.<br>
+Request Body: List of numbers representing the values of the second visit.<br>
+Response: The updated client object.<br>
+
+**Set Values of Promise Client**<br>
+URL: /client/setvalprc/{id}<br>
+Method: POST<br>
+Description: Sets the values of the promise client for a client.<br>
+Path Variable: id - The unique ID of the client.<br>
+Request Body: List of numbers representing the values of the promise client.<br>
+Response: The updated client object.<br>
 
 
 ```bash
