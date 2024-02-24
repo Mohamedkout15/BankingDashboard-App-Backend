@@ -1,5 +1,6 @@
 package zz.sk.bankingdashboard.Entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -19,19 +20,29 @@ public class Client implements Serializable {
     private String nomEntreprise;
     private String email;
     private String domaine;
-    private String adresse;
     private String matriculeFiscale;
     private String numtel;
 
-    @OneToOne(cascade = {CascadeType.PERSIST, CascadeType.REMOVE,CascadeType.MERGE}, orphanRemoval = true)
-    @JoinColumn(name = "deuxieme_visite_id_client")
-    private DeuxiemeVisite deuxiemeVisite;
+    @OneToOne(cascade = { CascadeType.REMOVE,CascadeType.MERGE}, orphanRemoval = true)
+    @JoinColumn(name = "adresse client")
+    private Adresse adresse;
+
 
     @OneToOne(cascade = {CascadeType.PERSIST, CascadeType.REMOVE,CascadeType.MERGE}, orphanRemoval = true)
-    @JoinColumn(name = "premiere_visite_id_client")
+    @JoinColumn(name = "premiere visite")
     private PremiereVisite premiereVisite;
 
+
+
     @OneToOne(cascade = {CascadeType.PERSIST, CascadeType.REMOVE,CascadeType.MERGE}, orphanRemoval = true)
-    @JoinColumn(name = "promesse_client_id_client")
+    @JoinColumn(name = "deuxieme visite")
+    private DeuxiemeVisite deuxiemeVisite;
+
+
+    @OneToOne(cascade = { CascadeType.REMOVE,CascadeType.MERGE}, orphanRemoval = true)
+    @JoinColumn(name = "promesse client")
     private PromesseClient promesseClient;
+
+
+
 }

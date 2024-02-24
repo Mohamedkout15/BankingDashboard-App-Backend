@@ -1,8 +1,20 @@
-/home/hammadi/Desktop/ExplfoyerSpring/BankingDashboard/src/main/java/zz/sk/bankingdashboard/Configuration/SwaggerConfig.java
-/home/hammadi/Desktop/ExplfoyerSpring/BankingDashboard/src/main/java/zz/sk/bankingdashboard/Configuration/WebSecurityConfig.java
-/home/hammadi/Desktop/ExplfoyerSpring/BankingDashboard/src/main/java/zz/sk/bankingdashboard/Configuration/AppConfig.java
-/home/hammadi/Desktop/ExplfoyerSpring/BankingDashboard/src/main/java/zz/sk/bankingdashboard/Entities/User.java
-/home/hammadi/Desktop/ExplfoyerSpring/BankingDashboard/src/main/java/zz/sk/bankingdashboard/BankingDashboardApplication.java
-/home/hammadi/Desktop/ExplfoyerSpring/BankingDashboard/src/main/java/zz/sk/bankingdashboard/Repositories/UserPrincipal.java
-/home/hammadi/Desktop/ExplfoyerSpring/BankingDashboard/src/main/java/zz/sk/bankingdashboard/Controllers/UserRegistrationController.java
-/home/hammadi/Desktop/ExplfoyerSpring/BankingDashboard/src/main/java/zz/sk/bankingdashboard/Repositories/UserRepository.java
+/home/hammadi/Desktop/BankingDashboard Project/BankingDashboard-App-Backend/src/main/java/zz/sk/bankingdashboard/Repositories/DeuxiemeVisiteRepository.java
+/home/hammadi/Desktop/BankingDashboard Project/BankingDashboard-App-Backend/src/main/java/zz/sk/bankingdashboard/Repositories/ClientRepository.java
+/home/hammadi/Desktop/BankingDashboard Project/BankingDashboard-App-Backend/src/main/java/zz/sk/bankingdashboard/Entities/User.java
+/home/hammadi/Desktop/BankingDashboard Project/BankingDashboard-App-Backend/src/main/java/zz/sk/bankingdashboard/Repositories/UserRepository.java
+/home/hammadi/Desktop/BankingDashboard Project/BankingDashboard-App-Backend/src/main/java/zz/sk/bankingdashboard/Entities/Role.java
+/home/hammadi/Desktop/BankingDashboard Project/BankingDashboard-App-Backend/src/main/java/zz/sk/bankingdashboard/Entities/DeuxiemeVisite.java
+/home/hammadi/Desktop/BankingDashboard Project/BankingDashboard-App-Backend/src/main/java/zz/sk/bankingdashboard/Controllers/Client/ClientController.java
+/home/hammadi/Desktop/BankingDashboard Project/BankingDashboard-App-Backend/src/main/java/zz/sk/bankingdashboard/BankingDashboardApplication.java
+/home/hammadi/Desktop/BankingDashboard Project/BankingDashboard-App-Backend/src/main/java/zz/sk/bankingdashboard/Configuration/AppConfig.java
+/home/hammadi/Desktop/BankingDashboard Project/BankingDashboard-App-Backend/src/main/java/zz/sk/bankingdashboard/Services/Client/InterfaceClientServiceImp.java
+/home/hammadi/Desktop/BankingDashboard Project/BankingDashboard-App-Backend/src/main/java/zz/sk/bankingdashboard/Configuration/CorsConfig.java
+/home/hammadi/Desktop/BankingDashboard Project/BankingDashboard-App-Backend/src/main/java/zz/sk/bankingdashboard/Configuration/SwaggerConfig.java
+/home/hammadi/Desktop/BankingDashboard Project/BankingDashboard-App-Backend/src/main/java/zz/sk/bankingdashboard/Repositories/PromesseRepository.java
+/home/hammadi/Desktop/BankingDashboard Project/BankingDashboard-App-Backend/src/main/java/zz/sk/bankingdashboard/Repositories/PremiereVisiteRepository.java
+/home/hammadi/Desktop/BankingDashboard Project/BankingDashboard-App-Backend/src/main/java/zz/sk/bankingdashboard/Services/Client/InterfaceClientService.java
+/home/hammadi/Desktop/BankingDashboard Project/BankingDashboard-App-Backend/src/main/java/zz/sk/bankingdashboard/Entities/PromesseClient.java
+/home/hammadi/Desktop/BankingDashboard Project/BankingDashboard-App-Backend/src/main/java/zz/sk/bankingdashboard/Entities/Client.java
+/home/hammadi/Desktop/BankingDashboard Project/BankingDashboard-App-Backend/src/main/java/zz/sk/bankingdashboard/Configuration/WebSecurityConfig.java
+/home/hammadi/Desktop/BankingDashboard Project/BankingDashboard-App-Backend/src/main/java/zz/sk/bankingdashboard/Entities/PremiereVisite.java
+/home/hammadi/Desktop/BankingDashboard Project/BankingDashboard-App-Backend/src/main/java/zz/sk/bankingdashboard/Controllers/UserRegistrationController.java
