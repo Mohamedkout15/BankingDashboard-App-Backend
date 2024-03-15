@@ -13,6 +13,7 @@ import zz.sk.bankingdashboard.Repositories.PremiereVisiteRepository;
 import zz.sk.bankingdashboard.Repositories.PromesseRepository;
 
 import java.util.Date;
+import java.util.List;
 
 
 @Slf4j
@@ -32,8 +33,18 @@ public class InterfaceClientServiceImp implements InterfaceClientService{
         return clientRepository.save(client);
     }
 
+    @Override
+    public List<Client> getAllClients() {
+        return clientRepository.findAll();
+    }
+
     public Client findclientbyid(String id){
         return clientRepository.findClientByIdClient(id);
+    }
+
+    @Override
+    public void deleteclient(String id) {
+        clientRepository.deleteClientByIdClient(id);
     }
 
     public Client updateclient(String id){

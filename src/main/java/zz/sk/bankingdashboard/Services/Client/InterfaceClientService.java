@@ -10,7 +10,6 @@ import zz.sk.bankingdashboard.Entities.PromesseClient;
 
 import java.util.Date;
 import java.util.List;
-import java.util.Map;
 
 
 @Service
@@ -19,7 +18,11 @@ public interface InterfaceClientService {
 
     public Client addClient(Client client);
 
+    public List<Client> getAllClients();
+
     public Client findclientbyid(String id);
+
+    public void deleteclient(String id);
 
     public Client updateclient(String id);
 
