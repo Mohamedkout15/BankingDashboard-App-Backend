@@ -10,13 +10,11 @@ import java.util.Optional;
 
 public interface ClientRepository extends JpaRepository<Client, Long> {
     Client findClientByIdClient(String idClient);
+    Client deleteClientByIdClient(String idClient);
 
-    List<Client> findClientByPremiereVisite(PremiereVisite premiereVisite);
+    List<Client> findAll();
     List<Client> findClientsByDomaine(String Domaine);
-
     List<Client> findClientsByAdresse_Gouvernerat(String governorat);
-
     List<Client> findClientsByPremiereVisite_DatePrVisite(Date date);
-
     List<Client> findClientsByDeuxiemeVisite_DateDxVisite(Date date);
 }

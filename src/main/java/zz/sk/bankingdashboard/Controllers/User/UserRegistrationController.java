@@ -1,5 +1,5 @@
 // UserRegistrationController.java
-package zz.sk.bankingdashboard.Controllers;
+package zz.sk.bankingdashboard.Controllers.User;
 /*
 import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,9 +1,9 @@
 package zz.sk.bankingdashboard.Controllers.Client;
 
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.stereotype.Component;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 import zz.sk.bankingdashboard.Entities.Client;
 import zz.sk.bankingdashboard.Entities.DeuxiemeVisite;
@@ -41,14 +41,24 @@ public class ClientController {
     {
         return demoservice.addClient(client);
     }
-
     @GetMapping("/findclient/{id}")
     public Client findclientbyid(@PathVariable String id)
     {
         return demoservice.findclientbyid(id);
     }
 
-    @PostMapping("/setdatedxvisite/{id}")
+    @GetMapping("/findall")
+    public List<Client>getall(){
+        return demoservice.getAllClients();
+    }
+
+    @Transactional
+    @DeleteMapping("/deleteclient/{id}")
+    public void deleteclient(@PathVariable String id) {
+         demoservice.deleteclient(id);
+    }
+
+  @PostMapping("/setdatedxvisite/{id}")
     @CrossOrigin(origins = "http://localhost:4200")
     public Client setdatedxvisite(@PathVariable String id,
                                   @RequestParam("date") @DateTimeFormat(pattern = "yyyy-MM-dd") Date date) {
@@ -142,3 +152,4 @@ public class ClientController {
         return demoservice.checkid(id);
     }
 }
+
