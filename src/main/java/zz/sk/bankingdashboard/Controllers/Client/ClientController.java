@@ -3,7 +3,6 @@ package zz.sk.bankingdashboard.Controllers.Client;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.stereotype.Component;
-import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 import zz.sk.bankingdashboard.Entities.Client;
 import zz.sk.bankingdashboard.Entities.DeuxiemeVisite;
@@ -51,11 +50,15 @@ public class ClientController {
     public List<Client>getall(){
         return demoservice.getAllClients();
     }
+    @PutMapping("/update/{id}")
+    public Client updateclient(@PathVariable String id , @RequestBody Client client){
+        return demoservice.updateclient(id,client);
+    }
 
-    @Transactional
-    @DeleteMapping("/deleteclient/{id}")
-    public void deleteclient(@PathVariable String id) {
-         demoservice.deleteclient(id);
+
+    @DeleteMapping("/delete/{id}")
+    public void deleteclient(@PathVariable String id ) {
+          demoservice.deleteclient(id);
     }
 
   @PostMapping("/setdatedxvisite/{id}")

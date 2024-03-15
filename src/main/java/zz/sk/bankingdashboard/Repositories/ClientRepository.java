@@ -10,7 +10,6 @@ import java.util.Optional;
 
 public interface ClientRepository extends JpaRepository<Client, Long> {
     Client findClientByIdClient(String idClient);
-    Client deleteClientByIdClient(String idClient);
 
     List<Client> findAll();
     List<Client> findClientsByDomaine(String Domaine);

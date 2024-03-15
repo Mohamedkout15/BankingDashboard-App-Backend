@@ -24,7 +24,7 @@ public interface InterfaceClientService {
 
     public void deleteclient(String id);
 
-    public Client updateclient(String id);
+    public Client updateclient(String id, Client updatedClient);
 
     public Client setpremierevisite(String id,PremiereVisite premierevisite);
 

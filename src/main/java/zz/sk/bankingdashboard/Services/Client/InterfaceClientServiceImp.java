@@ -44,16 +44,32 @@ public class InterfaceClientServiceImp implements InterfaceClientService{
 
     @Override
     public void deleteclient(String id) {
-        clientRepository.deleteClientByIdClient(id);
+        Client client = clientRepository.findClientByIdClient(id);
+        clientRepository.delete(client);
+
     }
 
-    public Client updateclient(String id){
-        Client client = clientRepository.findClientByIdClient(id);
-        if (client !=null) {
-            return clientRepository.save(client);
+    @Override
+
+
+    public Client updateclient(String id, Client updatedClient) {
+        Client existingClient = clientRepository.findClientByIdClient(id);
+        if (existingClient != null) {
+            existingClient.setAdresse(updatedClient.getAdresse());
+            existingClient.setDeuxiemeVisite(updatedClient.getDeuxiemeVisite());
+            existingClient.setDomaine(updatedClient.getDomaine());
+            existingClient.setEmail(updatedClient.getEmail());
+            existingClient.setMatriculeFiscale(updatedClient.getMatriculeFiscale());
+            existingClient.setNomEntreprise(updatedClient.getNomEntreprise());
+            existingClient.setNumtel(updatedClient.getNumtel());
+            existingClient.setPremiereVisite(updatedClient.getPremiereVisite());
+            existingClient.setPromesseClient(updatedClient.getPromesseClient());
+            return clientRepository.save(existingClient);
+        } else {
+            return null; // You can also throw an exception indicating that the client was not found
         }
-        else return null;
     }
+
 
     public Client setpremierevisite(String id , PremiereVisite premierevisite ){
         Client client = clientRepository.findClientByIdClient(id);
