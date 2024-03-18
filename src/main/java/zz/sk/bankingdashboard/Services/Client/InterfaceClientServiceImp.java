@@ -30,6 +30,9 @@ public class InterfaceClientServiceImp implements InterfaceClientService{
     PromesseRepository promesseRepository;
     @Override
     public Client addClient(Client client) {
+        client.setPremiereVisite(null);
+        client.setDeuxiemeVisite(null);
+        client.setPromesseClient(null);
         return clientRepository.save(client);
     }
 
