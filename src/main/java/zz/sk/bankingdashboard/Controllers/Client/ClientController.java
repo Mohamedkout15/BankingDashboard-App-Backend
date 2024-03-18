@@ -1,9 +1,11 @@
 package zz.sk.bankingdashboard.Controllers.Client;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
-import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 import zz.sk.bankingdashboard.Entities.Client;
 import zz.sk.bankingdashboard.Entities.DeuxiemeVisite;
@@ -17,6 +19,8 @@ import zz.sk.bankingdashboard.Services.Client.InterfaceClientService;
 import java.util.Date;
 import java.util.List;
 
+import static com.mysql.cj.conf.PropertyKey.logger;
+
 
 @RestController
 @Component
@@ -24,6 +28,7 @@ import java.util.List;
 @CrossOrigin(origins = "http://localhost:4200")
 public class ClientController {
 
+    private static final Logger logger = LoggerFactory.getLogger(ClientController.class);
 
     @Autowired
     InterfaceClientService demoservice ;
@@ -51,11 +56,21 @@ public class ClientController {
     public List<Client>getall(){
         return demoservice.getAllClients();
     }
+    @CrossOrigin(origins = "http://localhost:4200")
+    @PatchMapping("/update/{clientId}")
 
-    @Transactional
-    @DeleteMapping("/deleteclient/{id}")
-    public void deleteclient(@PathVariable String id) {
-         demoservice.deleteclient(id);
+    public ResponseEntity<Client> updateClient(@PathVariable String clientId, @RequestBody Client client) {
+        System.out.println(clientId);
+        System.out.println(client);
+        Client updatedClient = demoservice.updateclient(clientId, client);
+
+        return ResponseEntity.ok(updatedClient);
+    }
+
+
+    @DeleteMapping("/delete/{id}")
+    public void deleteclient(@PathVariable String id ) {
+          demoservice.deleteclient(id);
     }
 
   @PostMapping("/setdatedxvisite/{id}")

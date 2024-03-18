@@ -7,10 +7,7 @@ import zz.sk.bankingdashboard.Entities.Client;
 import zz.sk.bankingdashboard.Entities.DeuxiemeVisite;
 import zz.sk.bankingdashboard.Entities.PremiereVisite;
 import zz.sk.bankingdashboard.Entities.PromesseClient;
-import zz.sk.bankingdashboard.Repositories.ClientRepository;
-import zz.sk.bankingdashboard.Repositories.DeuxiemeVisiteRepository;
-import zz.sk.bankingdashboard.Repositories.PremiereVisiteRepository;
-import zz.sk.bankingdashboard.Repositories.PromesseRepository;
+import zz.sk.bankingdashboard.Repositories.*;
 
 import java.util.Date;
 import java.util.List;
@@ -28,8 +25,13 @@ public class InterfaceClientServiceImp implements InterfaceClientService{
     PremiereVisiteRepository premiereVisiteRepository;
     @Autowired
     PromesseRepository promesseRepository;
+    @Autowired
+    AdresseRepository adresseRepository;
     @Override
     public Client addClient(Client client) {
+        client.setPremiereVisite(null);
+        client.setDeuxiemeVisite(null);
+        client.setPromesseClient(null);
         return clientRepository.save(client);
     }
 
@@ -44,16 +46,32 @@ public class InterfaceClientServiceImp implements InterfaceClientService{
 
     @Override
     public void deleteclient(String id) {
-        clientRepository.deleteClientByIdClient(id);
+        Client client = clientRepository.findClientByIdClient(id);
+        clientRepository.delete(client);
+
     }
 
-    public Client updateclient(String id){
-        Client client = clientRepository.findClientByIdClient(id);
-        if (client !=null) {
-            return clientRepository.save(client);
+    @Override
+
+
+    public Client updateclient(String id, Client updatedClient) {
+        Client existingClient = clientRepository.findClientByIdClient(id);
+        if (existingClient != null) {
+            existingClient.setAdresse(updatedClient.getAdresse());
+            existingClient.setDeuxiemeVisite(updatedClient.getDeuxiemeVisite());
+            existingClient.setDomaine(updatedClient.getDomaine());
+            existingClient.setEmail(updatedClient.getEmail());
+            existingClient.setMatriculeFiscale(updatedClient.getMatriculeFiscale());
+            existingClient.setNomEntreprise(updatedClient.getNomEntreprise());
+            existingClient.setNumtel(updatedClient.getNumtel());
+            existingClient.setPremiereVisite(updatedClient.getPremiereVisite());
+            existingClient.setPromesseClient(updatedClient.getPromesseClient());
+            return clientRepository.save(existingClient);
+        } else {
+            return null;
         }
-        else return null;
     }
+
 
     public Client setpremierevisite(String id , PremiereVisite premierevisite ){
         Client client = clientRepository.findClientByIdClient(id);
