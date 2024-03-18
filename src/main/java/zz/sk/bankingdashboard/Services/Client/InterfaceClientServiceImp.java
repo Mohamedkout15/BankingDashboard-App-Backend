@@ -7,10 +7,7 @@ import zz.sk.bankingdashboard.Entities.Client;
 import zz.sk.bankingdashboard.Entities.DeuxiemeVisite;
 import zz.sk.bankingdashboard.Entities.PremiereVisite;
 import zz.sk.bankingdashboard.Entities.PromesseClient;
-import zz.sk.bankingdashboard.Repositories.ClientRepository;
-import zz.sk.bankingdashboard.Repositories.DeuxiemeVisiteRepository;
-import zz.sk.bankingdashboard.Repositories.PremiereVisiteRepository;
-import zz.sk.bankingdashboard.Repositories.PromesseRepository;
+import zz.sk.bankingdashboard.Repositories.*;
 
 import java.util.Date;
 import java.util.List;
@@ -28,6 +25,8 @@ public class InterfaceClientServiceImp implements InterfaceClientService{
     PremiereVisiteRepository premiereVisiteRepository;
     @Autowired
     PromesseRepository promesseRepository;
+    @Autowired
+    AdresseRepository adresseRepository;
     @Override
     public Client addClient(Client client) {
         client.setPremiereVisite(null);
@@ -69,7 +68,7 @@ public class InterfaceClientServiceImp implements InterfaceClientService{
             existingClient.setPromesseClient(updatedClient.getPromesseClient());
             return clientRepository.save(existingClient);
         } else {
-            return null; // You can also throw an exception indicating that the client was not found
+            return null;
         }
     }
 

@@ -5,4 +5,5 @@ import zz.sk.bankingdashboard.Entities.Adresse;
 
 
 public interface AdresseRepository extends JpaRepository<Adresse, Long> {
+
 }

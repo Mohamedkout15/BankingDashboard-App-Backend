@@ -15,10 +15,20 @@ public class Adresse implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
     private Long id;
-    private String adresse ;
-    private String ville ;
-    private String gouvernerat ;
-    private String codepostal ;
-    private String pays ;
+    private String adresse;
+    private String ville;
+    private String gouvernerat;
+    private String codepostal;
+    private String pays;
 
+
+
+    // Constructor with String arguments
+    public Adresse(String adresse, String ville, String gouvernerat, String codepostal, String pays) {
+        this.adresse = adresse;
+        this.ville = ville;
+        this.gouvernerat = gouvernerat;
+        this.codepostal = codepostal;
+        this.pays = pays;
+    }
 }
