@@ -7,5 +7,6 @@ RUN mvn clean package
 
 # Use OpenJDK to run the application
 FROM openjdk:11
+EXPOSE 8081
 COPY --from=build /app/target/bankingdashboard-0.0.1-SNAPSHOT.jar app.jar
 ENTRYPOINT ["java","-jar","/app.jar"]
