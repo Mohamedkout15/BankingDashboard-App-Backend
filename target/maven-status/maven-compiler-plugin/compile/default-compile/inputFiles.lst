@@ -1,20 +1,26 @@
-/home/hammadi/Desktop/BankingDashboard Project/BankingDashboard-App-Backend/src/main/java/zz/sk/bankingdashboard/Repositories/DeuxiemeVisiteRepository.java
-/home/hammadi/Desktop/BankingDashboard Project/BankingDashboard-App-Backend/src/main/java/zz/sk/bankingdashboard/Repositories/ClientRepository.java
-/home/hammadi/Desktop/BankingDashboard Project/BankingDashboard-App-Backend/src/main/java/zz/sk/bankingdashboard/Entities/User.java
-/home/hammadi/Desktop/BankingDashboard Project/BankingDashboard-App-Backend/src/main/java/zz/sk/bankingdashboard/Repositories/UserRepository.java
-/home/hammadi/Desktop/BankingDashboard Project/BankingDashboard-App-Backend/src/main/java/zz/sk/bankingdashboard/Entities/Role.java
-/home/hammadi/Desktop/BankingDashboard Project/BankingDashboard-App-Backend/src/main/java/zz/sk/bankingdashboard/Entities/DeuxiemeVisite.java
-/home/hammadi/Desktop/BankingDashboard Project/BankingDashboard-App-Backend/src/main/java/zz/sk/bankingdashboard/Controllers/Client/ClientController.java
-/home/hammadi/Desktop/BankingDashboard Project/BankingDashboard-App-Backend/src/main/java/zz/sk/bankingdashboard/BankingDashboardApplication.java
-/home/hammadi/Desktop/BankingDashboard Project/BankingDashboard-App-Backend/src/main/java/zz/sk/bankingdashboard/Configuration/AppConfig.java
-/home/hammadi/Desktop/BankingDashboard Project/BankingDashboard-App-Backend/src/main/java/zz/sk/bankingdashboard/Services/Client/InterfaceClientServiceImp.java
-/home/hammadi/Desktop/BankingDashboard Project/BankingDashboard-App-Backend/src/main/java/zz/sk/bankingdashboard/Configuration/CorsConfig.java
-/home/hammadi/Desktop/BankingDashboard Project/BankingDashboard-App-Backend/src/main/java/zz/sk/bankingdashboard/Configuration/SwaggerConfig.java
-/home/hammadi/Desktop/BankingDashboard Project/BankingDashboard-App-Backend/src/main/java/zz/sk/bankingdashboard/Repositories/PromesseRepository.java
-/home/hammadi/Desktop/BankingDashboard Project/BankingDashboard-App-Backend/src/main/java/zz/sk/bankingdashboard/Repositories/PremiereVisiteRepository.java
-/home/hammadi/Desktop/BankingDashboard Project/BankingDashboard-App-Backend/src/main/java/zz/sk/bankingdashboard/Services/Client/InterfaceClientService.java
-/home/hammadi/Desktop/BankingDashboard Project/BankingDashboard-App-Backend/src/main/java/zz/sk/bankingdashboard/Entities/PromesseClient.java
-/home/hammadi/Desktop/BankingDashboard Project/BankingDashboard-App-Backend/src/main/java/zz/sk/bankingdashboard/Entities/Client.java
-/home/hammadi/Desktop/BankingDashboard Project/BankingDashboard-App-Backend/src/main/java/zz/sk/bankingdashboard/Configuration/WebSecurityConfig.java
-/home/hammadi/Desktop/BankingDashboard Project/BankingDashboard-App-Backend/src/main/java/zz/sk/bankingdashboard/Entities/PremiereVisite.java
-/home/hammadi/Desktop/BankingDashboard Project/BankingDashboard-App-Backend/src/main/java/zz/sk/bankingdashboard/Controllers/UserRegistrationController.java
+C:\Users\moham\OneDrive\Bureau\BankingDashboard-App-Backend\src\main\java\zz\sk\bankingdashboard\Entities\Client.java
+C:\Users\moham\OneDrive\Bureau\BankingDashboard-App-Backend\src\main\java\zz\sk\bankingdashboard\Entities\PromesseClient.java
+C:\Users\moham\OneDrive\Bureau\BankingDashboard-App-Backend\src\main\java\zz\sk\bankingdashboard\Configuration\AppConfig.java
+C:\Users\moham\OneDrive\Bureau\BankingDashboard-App-Backend\src\main\java\zz\sk\bankingdashboard\Configuration\CorsConfig.java
+C:\Users\moham\OneDrive\Bureau\BankingDashboard-App-Backend\src\main\java\zz\sk\bankingdashboard\Repositories\PremiereVisiteRepository.java
+C:\Users\moham\OneDrive\Bureau\BankingDashboard-App-Backend\src\main\java\zz\sk\bankingdashboard\Entities\User.java
+C:\Users\moham\OneDrive\Bureau\BankingDashboard-App-Backend\src\main\java\zz\sk\bankingdashboard\Controllers\Client\ClientController.java
+C:\Users\moham\OneDrive\Bureau\BankingDashboard-App-Backend\src\main\java\zz\sk\bankingdashboard\Entities\PremiereVisite.java
+C:\Users\moham\OneDrive\Bureau\BankingDashboard-App-Backend\src\main\java\zz\sk\bankingdashboard\BankingDashboardApplication.java
+C:\Users\moham\OneDrive\Bureau\BankingDashboard-App-Backend\src\main\java\zz\sk\bankingdashboard\Configuration\AdresseDeserializer.java
+C:\Users\moham\OneDrive\Bureau\BankingDashboard-App-Backend\src\main\java\zz\sk\bankingdashboard\Configuration\CustomDeserializer.java
+C:\Users\moham\OneDrive\Bureau\BankingDashboard-App-Backend\src\main\java\zz\sk\bankingdashboard\Repositories\ClientRepository.java
+C:\Users\moham\OneDrive\Bureau\BankingDashboard-App-Backend\src\main\java\zz\sk\bankingdashboard\Services\Client\InterfaceClientService.java
+C:\Users\moham\OneDrive\Bureau\BankingDashboard-App-Backend\src\main\java\zz\sk\bankingdashboard\Configuration\JacksonConfiguration.java
+C:\Users\moham\OneDrive\Bureau\BankingDashboard-App-Backend\src\main\java\zz\sk\bankingdashboard\Entities\Adresse.java
+C:\Users\moham\OneDrive\Bureau\BankingDashboard-App-Backend\src\main\java\zz\sk\bankingdashboard\Controllers\User\UserRegistrationController.java
+C:\Users\moham\OneDrive\Bureau\BankingDashboard-App-Backend\src\main\java\zz\sk\bankingdashboard\Entities\DeuxiemeVisite.java
+C:\Users\moham\OneDrive\Bureau\BankingDashboard-App-Backend\src\main\java\zz\sk\bankingdashboard\Repositories\PromesseRepository.java
+C:\Users\moham\OneDrive\Bureau\BankingDashboard-App-Backend\src\main\java\zz\sk\bankingdashboard\Configuration\SwaggerConfig.java
+C:\Users\moham\OneDrive\Bureau\BankingDashboard-App-Backend\src\main\java\zz\sk\bankingdashboard\Repositories\UserRepository.java
+C:\Users\moham\OneDrive\Bureau\BankingDashboard-App-Backend\src\main\java\zz\sk\bankingdashboard\Configuration\WebSecurityConfig.java
+C:\Users\moham\OneDrive\Bureau\BankingDashboard-App-Backend\src\main\java\zz\sk\bankingdashboard\DataSource\DataSourceConfig.java
+C:\Users\moham\OneDrive\Bureau\BankingDashboard-App-Backend\src\main\java\zz\sk\bankingdashboard\Services\Client\InterfaceClientServiceImp.java
+C:\Users\moham\OneDrive\Bureau\BankingDashboard-App-Backend\src\main\java\zz\sk\bankingdashboard\Entities\Role.java
+C:\Users\moham\OneDrive\Bureau\BankingDashboard-App-Backend\src\main\java\zz\sk\bankingdashboard\Repositories\DeuxiemeVisiteRepository.java
+C:\Users\moham\OneDrive\Bureau\BankingDashboard-App-Backend\src\main\java\zz\sk\bankingdashboard\Repositories\AdresseRepository.java
